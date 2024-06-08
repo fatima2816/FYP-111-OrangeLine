@@ -709,24 +709,32 @@ def fault_detection():
 
 
 #Reporting 
+
+
 current_date = datetime.now().date()
-last_week = current_date - timedelta(days=120)
+last_week = current_date - timedelta(days=200)
 
 table_name = "FaultData"
 rows = supabase_client.table(table_name).select("*").gte('OccurrenceDate', last_week).execute().data
 
 @app.route('/report_data')
-def get_report_data():
+def faultTable():
+
     faultsOccurred = 0
     faultsResolved = 0
     faultsPending = 0
     faultsObservation = 0
 
-        
     for row in rows:
+        system = row["System"]
+        equipment = row["Equipment"]
         status = row["Status"]
-        faultsOccurred += 1
 
+        if system == "Others" or system is None or equipment == "Others" or equipment is None:
+            continue
+        
+        faultsOccurred += 1
+        
         if status == 'Resolved':
             faultsResolved += 1
         elif status == 'Pending':
@@ -739,15 +747,41 @@ def get_report_data():
         "Number of Faults": [faultsOccurred, faultsResolved, faultsPending, faultsObservation]
     }
 
-    return jsonify(tableData)
+    # Create figure and axis
+    fig, ax = plt.subplots()
 
+    # Hide axes
+    ax.axis('tight')
+    ax.axis('off')
 
-def generate_and_return_graph():
-   
+    # Create table
+    table = ax.table(cellText=list(zip(tableData["Fault Data"], map(str, tableData["Number of Faults"]))),
+                    colLabels=["Fault Data", "Number of Faults"],  # Add column labels
+                    cellLoc='center',
+                    loc='center')
+
+    # Adjust font size
+    table.auto_set_font_size(False)
+    table.set_fontsize(14)
+
+    # Adjust cell heights
+    table.scale(1.2, 1.6)
+
+    # Save graph
+    plt.savefig(f'../../assets/Fault_Table.png')
+
+    return systemGraph()
+
+def systemGraph():
+
     system_faults = {}
-    
+
     for row in rows:
         system = row["System"]
+        equipment = row["Equipment"]
+
+        if system == "Others" or system is None or equipment == "Others" or equipment is None:
+            continue
 
         if system not in system_faults:
             system_faults[system] = 0
@@ -755,7 +789,7 @@ def generate_and_return_graph():
         system_faults[system] += 1
 
     # Plotting
-    sorted_system = sorted(system_faults.items(), key=lambda x: x[1], reverse=True)[:10]
+    sorted_system = sorted(system_faults.items(), key=lambda x: x[1], reverse=True)
     system_names = [item[0] for item in sorted_system]
     faults_counts = [item[1] for item in sorted_system]
 
@@ -764,8 +798,9 @@ def generate_and_return_graph():
     plt.title("System Faults", fontsize=16, fontweight='bold')
     plt.xlabel("System", fontsize=14)
     plt.ylabel("Faults Count", fontsize=14)
+    max_faults_count = max(faults_counts)
     plt.xticks([])
-    plt.yticks(fontsize=12)
+    plt.yticks(range(5, max_faults_count + 5), fontsize=12)
     plt.gca().yaxis.set_major_locator(MaxNLocator(integer=True))  # Display only whole number values on y-axis
     plt.grid(color='gray', linestyle='--', linewidth=0.5, axis='y', alpha=0.7)
 
@@ -774,47 +809,26 @@ def generate_and_return_graph():
     for bar, label in zip(bars, system_names):
         yval = bar.get_height()
         plt.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=10, fontweight='bold')
-        plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=8, color='black', rotation=90)
+        plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=10, color='black', rotation=90)
 
     plt.tight_layout()
-    folder_path = os.path.abspath(os.path.join(os.path.dirname("app.py"), '..', '..', 'assets'))
 
-    # Check if the directory exists, if not, create it
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
+    plt.savefig(f'../../assets/Systems_Graph.png')
 
-    # Now you can save your images in this folder
-    image_path = os.path.join(folder_path, 'systems.png')
+    return equipmentGraph(system_names)
 
-    plt.savefig(image_path)
+def equipmentGraph(system_names):
 
-    # Close plot to free up memory
-    plt.close()
+    # print(system_names)
 
-    return image_path
+    for savedSystems in system_names:
 
-@app.route('/systems_graph')
-def systems_graph():
-    # Get the image path
-    image_path = generate_and_return_graph()
-    # Return the image path
-    return jsonify({'image_path': image_path})
-
-
-
-def generate_equipment_graph(system_names):
-   
-    if not system_names:
-        return jsonify({'error': 'System names not provided'})
-    print("DDSFDS")
-    print(system_names)
-    for saved_system in system_names:
         equipment_faults = {}
 
         for row in rows:
             system = row["System"]
 
-            if system == saved_system:
+            if system == savedSystems:
                 equipment = row["Equipment"]
 
                 if system == "Others" or system is None or equipment == "Others" or equipment is None:
@@ -845,58 +859,16 @@ def generate_equipment_graph(system_names):
 
         for bar, label in zip(bars, equipment_names):
             yval = bar.get_height()
-            plt.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=20, fontweight='bold')
-            plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=20, color='black', rotation=90)
+            plt.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=10, fontweight='bold')
+            plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=10, color='black', rotation=90)
 
         plt.tight_layout()
 
-        folder_path = os.path.abspath(os.path.join(os.path.dirname("app.py"), '..', '..', 'assets'))
+        # Save the image with a specific name in a local folder
+        plt.savefig(f'../../assets/{savedSystems}.png')
 
-        # Check if the directory exists, if not, create it
-        if not os.path.exists(folder_path):
-            os.makedirs(folder_path)
+        return system_names
 
-
-        # Now you can save your images in this folder
-        image_path = os.path.join(folder_path, f'{saved_system}.png')
-
-        plt.savefig(image_path)
-
-        # Close plot to free up memory
-        plt.close()
-
-        return image_path
-        
-        
-@app.route('/equipment_graph')
-def equipment_graph():
-
-    system_faults = {}
-    print(rows)
-    print("daasd")
-    for row in rows:
-        system = row["System"]
-        equipment = row["Equipment"]
-
-        if system == "Others" or system is None or equipment == "Others" or equipment is None:
-            continue
-
-        if system not in system_faults:
-            system_faults[system] = 0
-        
-        system_faults[system] += 1
-
-    # Plotting
-    sorted_system = sorted(system_faults.items(), key=lambda x: x[1], reverse=True)
-    system_names = [item[0] for item in sorted_system]
-   # Plot equipment graphs for each system
-   # Plot equipment graphs for each system
-    generated_images = []
-    for system_name in system_names:
-        image_path = generate_equipment_graph([system_name])  # Pass each system name separately
-        generated_images.append(image_path)
-    # Return the list of image paths
-    return jsonify({'image_paths': generated_images})
 
 @app.route('/spareParts_data', methods=['GET'])
 def get_data():

@@ -39,8 +39,10 @@ dependencies:
   flutter_math_fork: ^0.6.2
   flutter_layout_grid: ^2.0.0
   pdf: ^3.3.0
+  path_provider: ^2.0.8
   docx_template: 
   charts_flutter: ^0.12.0
+  universal_html: ^2.0.9
   syncfusion_flutter_charts:
   flutter_pdfview: 
   syncfusion_flutter_pdfviewer:
@@ -74,6 +76,13 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+  # fonts:
+  #   - family: OpenSans
+  #     fonts:
+  #       - asset: assets/fonts/OpenSans-Regular.ttf
+  #       - asset: assets/fonts/OpenSans-Bold.ttf
+  #         weight: 700
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -85,17 +94,40 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/pic.png
-    - assets/background.png
     - assets/Logo.png
     - assets/upload_image.png
     - assets/background_image.jpg
-    - assets/systems.png
-    - assets/Interior.png
-    - assets/FAS.png
-    - assets/PIS.png
-    - assets/Lightning.png
-    - assets/sample.pdf
+    - assets/background.png
 
+    - assets/Fault_Table.png
+    - assets/Systems_Graph.png
+
+    - assets/Radio.png
+    - assets/DCU.png
+    - assets/Door_System.png
+    - assets/BCU.png
+    - assets/PIS.png
+    - assets/SIU.png
+    - assets/Bogie_System.png
+    - assets/Current_Collector.png
+    - assets/HVAC.png
+    - assets/ATO.png
+    - assets/ATC.png
+    - assets/EB.png
+    - assets/Car_Body.png
+    - assets/Interior.png
+    - assets/Air_Compressor.png
+    - assets/Coupler_System.png
+    - assets/Lightning.png
+    - assets/Gangway.png
+    - assets/Wiper_System.png
+    - assets/TDS.png
+    - assets/FAS.png
+    - assets/DMI.png
+    - assets/Under_frame.png
+    - assets/Driver_Cab.png
+    - assets/HMI.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
