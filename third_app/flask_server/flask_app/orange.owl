@@ -1,0 +1,2684 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12/"
+     xml:base="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-12="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#hasEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#hasEquipment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#hasFault -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#hasFault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#isLocated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#isLocated"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ASCU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ASCU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ASCU_Cards -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ASCU_Cards">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATC_ATO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATC_ATO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATC"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATO"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DMI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ATO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#AXME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#AXME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Access_Door -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Access_Door">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Access_Door_Lock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Access_Door_Lock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Advertising_Board -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Advertising_Board">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_Compressor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_Compressor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_filter"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_hour_meter"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_set"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_dryer_unit"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_storage_tanks"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Micromesh_oil_filter"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pressure_switches"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Safety_valve"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_Horn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_Horn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_filter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_filter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_hour_meter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_hour_meter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_set -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_compressor_set">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:hasFault rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LowAirPressure"/>
+        <untitled-ontology-12:hasFault rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Overheating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_dryer_unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_dryer_unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_storage_tanks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_storage_tanks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Anti_rolling_bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Anti_rolling_bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Automatic_coupler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Automatic_coupler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Auxiliary_Control_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Auxiliary_Control_Unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_Temperature_Converter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_Temperature_Converter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_Temperature_Processor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_Temperature_Processor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_box -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_box">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BCU_Node_Circuit_Relays -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BCU_Node_Circuit_Relays">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BCU_Speed_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BCU_Speed_Sensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BLB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BLB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Battery_Cells -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Battery_Cells">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Blower_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Blower_Fan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Body_Paint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Body_Paint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Body_and_Cables -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Body_and_Cables">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_LHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_LHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Anti_rolling_bar"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_box"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie_frame"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Coil_Spring"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Earthing_device"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gearbox"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Lateral_Damper"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Leveling_Rod"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Primary_Damper"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Secondary_Damper"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_Bracket"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Wheel_Flange_Lubrication"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Wheelset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie_frame -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie_frame">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_Shoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_Shoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_resistor_box -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_resistor_box">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_resistor_box_insulator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_resistor_box_insulator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#CRPC_Controller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#CRPC_Controller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab3_PhaseVoltage_Monitoring_Relay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab3_PhaseVoltage_Monitoring_Relay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Camera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Camera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Condensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Condensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Condensor_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Condensor_Fan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Door -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Door">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Door_Lock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Door_Lock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Evaporator_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Evaporator_Fan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HP_switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HP_switch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Compressor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Compressor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:hasFault rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#InsufficientRefrigerant"/>
+        <rdfs:comment>Check the refrigerant level using a pressure gauge. If low, there may be a leak that needs to be located and repaired. Recharge the refrigerant if necessary.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Contactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Contactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Dampers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Dampers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Power_Supply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Power_Supply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_LP_Switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_LP_Switch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Main_Circuit_Breaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Main_Circuit_Breaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Thermal_Overload_Relay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Thermal_Overload_Relay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Y3Y4_Solenoid_Valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Y3Y4_Solenoid_Valve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_1A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_1A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_1B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_1B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_2A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_2A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_2B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_2B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_3A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_3A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_3B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_3B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_4A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_4A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_4B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_4B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_5A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_5A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_5B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_5B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Car_Body -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Car_Body">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_Stickers"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_car_body"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Kite_String"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Window_glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Carbon_skateboard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Carbon_skateboard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:hasFault rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EdgeDamage"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Charger_Module -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Charger_Module">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Charging_Contactors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Charging_Contactors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Coil_Spring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Coil_Spring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#CommunicationCard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#CommunicationCard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Contactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Contactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Coupler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Coupler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Automatic_coupler"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Semi_permanent_coupler"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Current_Collector -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Current_Collector">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Body_and_Cables"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Carbon_skateboard"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fuse_box"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Isolation_device"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Swing_arm_assy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DACU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DACU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DBPS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DBPS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BLB"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_resistor_box"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_resistor_box_insulator"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU_Sensors"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU_controller"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_Inverter"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_motor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_motor_filter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU_Sensors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU_Sensors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU_controller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DCU_controller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DMI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DMI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DRMD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DRMD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DXME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DXME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Access_Door"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Access_Door_Lock"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Door"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Door_Lock"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Lead_Screw_Bearing"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Motor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Rubber_Seal"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Switch"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Guide_Rail"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#K1_K2_Relay"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LDCU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Lead_Screw_Bearing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Lead_Screw_Bearing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Motor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Motor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Rubber_Seal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Rubber_Seal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door_Switch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Cab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Cab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Console"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Mushroom_Buttons"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pnuematic_pressure_gauge"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Reading_light"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Speedometer"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Sun_visor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Windscreen_wiper"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#driver_cab_seat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Cab_Light -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Cab_Light">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Console -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Console">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EDRM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EDRM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EGWM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EGWM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX_Camera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX_Camera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Earthing_device -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Earthing_device">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EdgeDamage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EdgeDamage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault"/>
+        <rdfs:comment>Carefully examine the extent of the damage to determine the best course of action. Look for any signs of cracking, chipping, or separation along the edges of the skateboard deck. If you notice areas of the skateboard&apos;s edges that are particularly susceptible to damage, consider reinforcing them with additional layers of carbon fiber or protective materials. Keep it under observation for the next system maintenance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#End_Destination_Display -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#End_Destination_Display">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_Stickers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_Stickers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_car_body -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_car_body">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_tent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_tent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M1-M2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M2-M3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M3-TC2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TC1-M1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_controller"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_smoke_heat_sensor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_smoke_sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_controller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_controller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_smoke_heat_sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_smoke_heat_sensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_smoke_sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#FAS_smoke_sensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Filter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Filter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fire_Extinguisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fire_Extinguisher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fuse_box -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fuse_box">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gangway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gangway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Exterior_tent"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Internal_Assembly_Plates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gangway_Emergency_Light -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gangway_Emergency_Light">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M1-M2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M2-M3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M3-TC2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TC1-M1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gateway_Smart_Valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gateway_Smart_Valve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gearbox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gearbox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#General_Tags -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#General_Tags">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Guide_Rail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Guide_Rail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#HMI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#HMI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#HVAC_Cab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#HVAC_Cab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab3_PhaseVoltage_Monitoring_Relay"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Condensor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Condensor_Fan"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Evaporator_Fan"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HP_switch"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Compressor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Contactor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Dampers"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_HVAC_Power_Supply"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_LP_Switch"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Main_Circuit_Breaker"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Thermal_Overload_Relay"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Y3Y4_Solenoid_Valve"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SPLC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#HVAC_Saloon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#HVAC_Saloon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#CRPC_Controller"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#CommunicationCard"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Filter"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon3_Phase_Voltage_Monitoring_Relay"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Condensor_Evaporator_Tubes_And_Fins"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Condensor_Fan"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Evaporator_Fan"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HP_Switch"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Compressor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Contactor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Dampers"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Power_Supply"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_LP_Switch"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Main_Circuit_Breaker"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Thermal_Overload_Relay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Head_Light_Blaster_Kit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Head_Light_Blaster_Kit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Head_Light_Power_Supply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Head_Light_Power_Supply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#High_Beam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#High_Beam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#InsufficientRefrigerant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#InsufficientRefrigerant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault"/>
+        <rdfs:comment>Check the refrigerant level using a pressure gauge. If low, there may be a leak that needs to be located and repaired. Recharge the refrigerant if necessary.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Integral_lifting_device -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Integral_lifting_device">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Advertising_Board"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Body_Paint"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fire_Extinguisher"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior_Accessories"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior_Wall_Floor_Roof"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Cabinet_Covers"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Seat_Paint"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Stickers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior_Accessories -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior_Accessories">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior_Wall_Floor_Roof -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Interior_Wall_Floor_Roof">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M1-M2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M2-M3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M3-TC2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TC1-M1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Internal_Assembly_Plates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Internal_Assembly_Plates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Isolation_device -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Isolation_device">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#K1_K2_Relay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#K1_K2_Relay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Kite_String -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Kite_String">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LCD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LCD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LDCU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LDCU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS_Controller1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS_Controller1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS_Controller2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS_Controller2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Lateral_Damper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Lateral_Damper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Leveling_Rod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Leveling_Rod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Levelling_Valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Levelling_Valve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Lightning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Lightning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Driver_Cab_Light"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gangway_Emergency_Light"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Head_Light_Blaster_Kit"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Head_Light_Power_Supply"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#High_Beam"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Low_Beam"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Light_Controller"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Light_Strip"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LowAirPressure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LowAirPressure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault"/>
+        <rdfs:comment>Check for leak and adjust pressure settings</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Low_Beam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Low_Beam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M1-M2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M1-M2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M2-M3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M2-M3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M3-TC2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M3-TC2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#MVB_Bus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#MVB_Bus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Media_Server -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Media_Server">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Micromesh_oil_filter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Micromesh_oil_filter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Module1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Module1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Module2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Module2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Mushroom_Buttons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Mushroom_Buttons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Node_Circuit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Node_Circuit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Contactor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#General_Tags"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Relay"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#OilSeepage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#OilSeepage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault"/>
+        <rdfs:comment>If the oil seepage is originating from loose fittings or connections, tighten them securely to prevent further leakage. Be careful not to overtighten, as this can damage the components. If the oil seepage is due to worn or damaged seals or gaskets, replace them with new ones. Ensure that you use high-quality replacement seals or gaskets compatible with the damper system to maintain proper functionality.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Overflow_Valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Overflow_Valve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Overheating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Overheating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault"/>
+        <rdfs:comment>Check ventilation, fan, air filter, oil levels, and heat exchanger for overheating issues.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PACU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PACU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PACU_Cards -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PACU_Cards">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PECU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PECU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PIS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PIS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ASCU"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#ASCU_Cards"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Cab_Camera"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DACU"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DRMD"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EX_Camera"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#End_Destination_Display"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LCD"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Media_Server"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PACU"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PACU_Cards"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#PECU"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Camera"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Speakers"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Side_Destination_Display"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TLCD_Camera_Screen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pneumatic_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pneumatic_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Air_Horn"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Auxiliary_Control_Unit"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BCU_Node_Circuit_Relays"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#BCU_Speed_Sensor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Brake_Shoe"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Gateway_Smart_Valve"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Levelling_Valve"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Overflow_Valve"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Tread_Brake_Unit"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#MVB/CAN_Bus_Wiring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pnuematic_pressure_gauge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pnuematic_pressure_gauge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pressure_switches -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Pressure_switches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Primary_Damper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Primary_Damper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:hasFault rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#OilSeepage"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#REP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#REP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS_Controller1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS_Controller1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS_Controller2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS_Controller2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Radio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Radio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Reading_light -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Reading_light">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Relay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Relay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Battery_Cells"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Blower_Fan"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Charger_Module"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Charging_Contactors"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DBPS"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Controller"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Inverter_Module"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Sensors"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Controller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Controller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Inverter_Module -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Inverter_Module">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Sensors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SIV_Sensors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SPLC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#SPLC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Safety_valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Safety_valve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon3_Phase_Voltage_Monitoring_Relay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon3_Phase_Voltage_Monitoring_Relay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Cabinet_Covers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Cabinet_Covers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Camera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Camera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_1A"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_1B"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_2A"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_2B"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_3A"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_3B"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_4A"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_4B"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_5A"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Camera_5B"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Condensor_Evaporator_Tubes_And_Fins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Condensor_Evaporator_Tubes_And_Fins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Condensor_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Condensor_Fan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Evaporator_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Evaporator_Fan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HP_Switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HP_Switch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Compressor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Compressor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Contactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Contactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Dampers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Dampers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Power_Supply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_HVAC_Power_Supply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_LP_Switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_LP_Switch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Light_Controller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Light_Controller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS_Controller1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS_Controller2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS_Controller1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS_Controller2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Light_Strip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Light_Strip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Main_Circuit_Breaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Main_Circuit_Breaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Speakers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Speakers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Door8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Thermal_Overload_Relay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Saloon_Thermal_Overload_Relay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Seat_Paint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Seat_Paint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Secondary_Damper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Secondary_Damper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Semi_permanent_coupler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Semi_permanent_coupler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M1-M2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M2-M3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#M3-TC2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TC1-M1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Side_Destination_Display -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Side_Destination_Display">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Speedometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Speedometer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Stickers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Stickers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Sun_visor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Sun_visor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Swing_arm_assy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Swing_arm_assy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TC1-M1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TC1-M1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TCMS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TCMS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#AXME"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DIME"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#DXME"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EDRM"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#EGWM"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#HMI"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#MVB_Bus"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#REP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_Temperature_Converter"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle_Temperature_Processor"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Cables"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Junction_Box"/>
+        <untitled-ontology-12:hasEquipment rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Sensors"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Cables -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Cables">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Junction_Box -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Junction_Box">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Sensors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TDS_Sensors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle3"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle4"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle5"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle6"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle7"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Axle8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TLCD_Camera_Screen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#TLCD_Camera_Screen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_Bracket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_Bracket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_Inverter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_Inverter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Module1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Module2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_motor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_motor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:hasFault rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#VaporContainment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_motor_filter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Traction_motor_filter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Tread_Brake_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Tread_Brake_Unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1_RHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_LHS"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2_RHS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Under_frame -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Under_frame">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Compressor4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit1_Fan2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Compressor4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Unit2_Fan2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#VaporContainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#VaporContainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Fault"/>
+        <rdfs:comment>Ensure that all seals, gaskets, and joints in the traction motor are in good condition and effectively prevent moisture ingress. Replace any damaged seals or gaskets promptly. Enhance the ventilation system within the traction motor to facilitate the removal of vapors generated during operation. Proper ventilation can help prevent the buildup of moisture and other contaminants.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Wheel_Flange_Lubrication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Wheel_Flange_Lubrication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Wheelset -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Wheelset">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie1_Axle2"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle1"/>
+        <untitled-ontology-12:isLocated rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Bogie2_Axle2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Window_glass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Window_glass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Windscreen_wiper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Windscreen_wiper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#driver_cab_seat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#driver_cab_seat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#MVB/CAN_Bus_Wiring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#MVB/CAN_Bus_Wiring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zuhaumar/ontologies/2023/10/untitled-ontology-12#Equipment"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

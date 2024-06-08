@@ -1,0 +1,9 @@
+Flask
+matplotlib
+pandas
+statsmodels
+seaborn
+pytesseract
+supabase
+rdflib
+opencv-python
