@@ -3,12 +3,15 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:third_app/Screen/mainPage/ManagerDashboard.dart';
+import 'package:third_app/app_state.dart';
 import 'dart:io';
 import 'package:third_app/Screen/Wheel Data OCR/init_measurements.dart';
 import 'package:third_app/Screen/Wheel Data OCR/data_manager.dart';
 import 'package:third_app/Screen/Wheel Data OCR/general_info.dart';
 import 'package:third_app/Screen/Wheel Data OCR/final_measurements.dart';
 import 'package:third_app/Screen/Wheel Data OCR/wheel_analysis.dart';
+import 'package:third_app/Screen/mainPage/EngineerDashboard.dart';
 
 void main() {
   runApp(MyApp());
@@ -263,6 +266,7 @@ class _MultiStepFormState extends State<MultiStepForm> {
   final PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
   final int _totalPages = 3;
+  String occupation = AppState.occupation;
 
   Future<void> sendOCRToFlaskAPI() async {
     try {
@@ -380,7 +384,11 @@ class _MultiStepFormState extends State<MultiStepForm> {
                       sendOCRToFlaskAPI();
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) {
-                          return const WheelAnalysis();
+                          if (occupation == 'Manager') {
+                            return ManagerDashboard();
+                          } else {
+                            return EngineerDashboard();
+                          }
                         },
                       ));
                     } else {

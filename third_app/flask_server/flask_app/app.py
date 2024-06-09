@@ -513,6 +513,12 @@ def upload_ocr():
             data = request.get_json()
             print(type(data))
             # Access the values using data[]
+            TrainNumber = data['TrainNumber']
+            WheelSetNumber = data['WheelSetNumber']
+            Date = data['Date']
+            Time = data['Time']
+           
+            
             a_LHS_Diameter = data['A-LHS-Diameter']
             a_LHS_FlangeThickness = data['A-LHS-FlangeThickness']
             a_LHS_FlangeWidth = data['A-LHS-FlangeWidth']
@@ -533,10 +539,7 @@ def upload_ocr():
             b_RHS_FlangeWidth = data['B-RHS-FlangeWidth']
             b_RHS_Qr = data['B-RHS-Qr']
             b_RHS_RadialDeviation = data['B-RHS-RadialDeviation']
-            Date = data['Date']
-            Time = data['Time']
-            TrainNumber = data['TrainNumber']
-            WheelSetNumber = data['WheelSetNumber']
+           
             afterCut = data['afterCut']
             
             # Assuming the Date is in the format "06.06.2023"

@@ -42,148 +42,148 @@ class _WheelAnalysisState extends State<WheelAnalysis> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFF111112),
-        automaticallyImplyLeading: false,
-        title: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 0.0),
-              child: Image.asset(
-                'assets/Logo.png',
-                width: 70,
-                height: 70,
-              ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Orange Line Maintenance System',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ],
-            ),
-            SizedBox(width: 510),
-            Icon(Icons.person, color: Colors.white), // Display the person icon
-            SizedBox(width: 5), // Add some space between the icon and the text
-            Text(
-              'Welcome, $fullName', // Display user's full name
-              style: TextStyle(color: Colors.white),
-            ),
-            PopupMenuButton<String>(
-              offset: Offset(0, 40),
-              icon: Icon(Icons.arrow_drop_down,
-                  color: Colors.white), // Display the dropdown icon
-              onSelected: (value) {
-                if (value == 'logout') {
-                  // Navigate to the login page
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
-                  );
-                }
-              },
-              itemBuilder: (BuildContext context) {
-                return [
-                  'Logout', // Logout option
-                ].map((String choice) {
-                  return PopupMenuItem<String>(
-                    value:
-                        choice.toLowerCase(), // Use lowercase for consistency
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Column(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {}, // Empty onTap handler
-                                  child: Icon(
-                                    Icons.person, // User icon
-                                    color: Colors
-                                        .orange, // Set icon color to orange
-                                    size: 40, // Increase icon size
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                            height:
-                                8), // Add some space between the icon and text
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                              onTap: () {}, // Empty onTap handler
-                              child: Text(
-                                '$fullName - $occupation', // Display user's name and occupation
-                                style: TextStyle(
-                                  color:
-                                      Colors.black, // Set text color to black
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        if (choice ==
-                            'Logout') // Check if the item is the logout option
-                          InkWell(
-                            onTap: () {
-                              // Handle logout option
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen()),
-                              );
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  choice,
-                                  style: TextStyle(
-                                    color:
-                                        Colors.black, // Set text color to black
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        if (choice !=
-                            'Logout') // Display non-pressable items as simple text
-                          Container(
-                            alignment: Alignment.center,
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 8.0),
-                              child: Text(
-                                choice,
-                                style: TextStyle(
-                                  color:
-                                      Colors.black, // Set text color to black
-                                ),
-                              ),
-                            ),
-                          ),
-                      ],
-                    ),
-                  );
-                }).toList();
-              },
-            ),
-          ],
-        ),
-        iconTheme: IconThemeData(
-          color: Colors.orange, // Set the icon (menu) color to orange
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Color(0xFF111112),
+      //   automaticallyImplyLeading: false,
+      //   title: Row(
+      //     children: [
+      //       Padding(
+      //         padding: const EdgeInsets.only(right: 0.0),
+      //         child: Image.asset(
+      //           'assets/Logo.png',
+      //           width: 70,
+      //           height: 70,
+      //         ),
+      //       ),
+      //       Column(
+      //         crossAxisAlignment: CrossAxisAlignment.start,
+      //         children: [
+      //           Text(
+      //             'Orange Line Maintenance System',
+      //             style: TextStyle(color: Colors.white),
+      //           ),
+      //         ],
+      //       ),
+      //       SizedBox(width: 510),
+      //       Icon(Icons.person, color: Colors.white), // Display the person icon
+      //       SizedBox(width: 5), // Add some space between the icon and the text
+      //       Text(
+      //         'Welcome, $fullName', // Display user's full name
+      //         style: TextStyle(color: Colors.white),
+      //       ),
+      //       PopupMenuButton<String>(
+      //         offset: Offset(0, 40),
+      //         icon: Icon(Icons.arrow_drop_down,
+      //             color: Colors.white), // Display the dropdown icon
+      //         onSelected: (value) {
+      //           if (value == 'logout') {
+      //             // Navigate to the login page
+      //             Navigator.push(
+      //               context,
+      //               MaterialPageRoute(builder: (context) => LoginScreen()),
+      //             );
+      //           }
+      //         },
+      //         itemBuilder: (BuildContext context) {
+      //           return [
+      //             'Logout', // Logout option
+      //           ].map((String choice) {
+      //             return PopupMenuItem<String>(
+      //               value:
+      //                   choice.toLowerCase(), // Use lowercase for consistency
+      //               child: Column(
+      //                 crossAxisAlignment: CrossAxisAlignment.start,
+      //                 children: [
+      //                   Row(
+      //                     mainAxisAlignment: MainAxisAlignment.center,
+      //                     children: [
+      //                       Column(
+      //                         children: [
+      //                           GestureDetector(
+      //                             onTap: () {}, // Empty onTap handler
+      //                             child: Icon(
+      //                               Icons.person, // User icon
+      //                               color: Colors
+      //                                   .orange, // Set icon color to orange
+      //                               size: 40, // Increase icon size
+      //                             ),
+      //                           ),
+      //                         ],
+      //                       ),
+      //                     ],
+      //                   ),
+      //                   SizedBox(
+      //                       height:
+      //                           8), // Add some space between the icon and text
+      //                   Row(
+      //                     mainAxisAlignment: MainAxisAlignment.center,
+      //                     children: [
+      //                       GestureDetector(
+      //                         onTap: () {}, // Empty onTap handler
+      //                         child: Text(
+      //                           '$fullName - $occupation', // Display user's name and occupation
+      //                           style: TextStyle(
+      //                             color:
+      //                                 Colors.black, // Set text color to black
+      //                           ),
+      //                         ),
+      //                       ),
+      //                     ],
+      //                   ),
+      //                   if (choice ==
+      //                       'Logout') // Check if the item is the logout option
+      //                     InkWell(
+      //                       onTap: () {
+      //                         // Handle logout option
+      //                         Navigator.push(
+      //                           context,
+      //                           MaterialPageRoute(
+      //                               builder: (context) => LoginScreen()),
+      //                         );
+      //                       },
+      //                       child: Container(
+      //                         alignment: Alignment.center,
+      //                         child: Padding(
+      //                           padding:
+      //                               const EdgeInsets.symmetric(vertical: 8.0),
+      //                           child: Text(
+      //                             choice,
+      //                             style: TextStyle(
+      //                               color:
+      //                                   Colors.black, // Set text color to black
+      //                             ),
+      //                           ),
+      //                         ),
+      //                       ),
+      //                     ),
+      //                   if (choice !=
+      //                       'Logout') // Display non-pressable items as simple text
+      //                     Container(
+      //                       alignment: Alignment.center,
+      //                       child: Padding(
+      //                         padding:
+      //                             const EdgeInsets.symmetric(vertical: 8.0),
+      //                         child: Text(
+      //                           choice,
+      //                           style: TextStyle(
+      //                             color:
+      //                                 Colors.black, // Set text color to black
+      //                           ),
+      //                         ),
+      //                       ),
+      //                     ),
+      //                 ],
+      //               ),
+      //             );
+      //           }).toList();
+      //         },
+      //       ),
+      //     ],
+      //   ),
+      //   iconTheme: IconThemeData(
+      //     color: Colors.orange, // Set the icon (menu) color to orange
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Container(
           height: 720,
@@ -353,40 +353,40 @@ class _WheelAnalysisState extends State<WheelAnalysis> {
                   ),
                 ),
               ),
-              Positioned(
-                left: 140,
-                top: 300,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xddff8518), // Replace with your desired color
-                    shape: BoxShape.circle, // Makes the container circular
-                  ),
-                  child: IconButton(
-                    icon: Icon(Icons.arrow_back),
-                    color: Colors.white, // Icon color
-                    iconSize: 35,
-                    onPressed: () {
-                      // Navigate back when the back button is pressed
-                      // Navigator.pop(context);
-                      if (occupation == 'Engineer') {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => EngineerDashboard(),
-                          ),
-                        );
-                      } else if (occupation == 'Manager') {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ManagerDashboard(),
-                          ),
-                        );
-                      }
-                    },
-                  ),
-                ),
-              ),
+              // Positioned(
+              //   left: 140,
+              //   top: 300,
+              //   child: Container(
+              //     decoration: BoxDecoration(
+              //       color: Color(0xddff8518), // Replace with your desired color
+              //       shape: BoxShape.circle, // Makes the container circular
+              //     ),
+              //     child: IconButton(
+              //       icon: Icon(Icons.arrow_back),
+              //       color: Colors.white, // Icon color
+              //       iconSize: 35,
+              //       onPressed: () {
+              //         // Navigate back when the back button is pressed
+              //         // Navigator.pop(context);
+              //         if (occupation == 'Engineer') {
+              //           Navigator.push(
+              //             context,
+              //             MaterialPageRoute(
+              //               builder: (context) => EngineerDashboard(),
+              //             ),
+              //           );
+              //         } else if (occupation == 'Manager') {
+              //           Navigator.push(
+              //             context,
+              //             MaterialPageRoute(
+              //               builder: (context) => ManagerDashboard(),
+              //             ),
+              //           );
+              //         }
+              //       },
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
@@ -454,4 +454,3 @@ class _WheelAnalysisState extends State<WheelAnalysis> {
 
 //   return wheelSetInfoWidgets;
 // }
-
