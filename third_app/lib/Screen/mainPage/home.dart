@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                   borderRadius:
                       BorderRadius.circular(12), // Adjust the radius as needed
                 ),
-                height: 210,
+                height: 230,
                 width: 1250,
                 child: Row(
                   children: [
@@ -64,7 +64,7 @@ class _HomeState extends State<Home> {
                               Padding(
                                 padding: const EdgeInsets.only(
                                     top: 20,
-                                    left: 20), // Adjust top padding here
+                                    left: 35), // Adjust top padding here
                                 child: Text(
                                   'Orange Line Metro Train',
                                   style: TextStyle(
@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 20),
+                                    padding: const EdgeInsets.only(left: 35),
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -88,6 +88,7 @@ class _HomeState extends State<Home> {
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 16,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                         SizedBox(height: 10),
@@ -98,12 +99,13 @@ class _HomeState extends State<Home> {
                                             fontSize: 16,
                                           ),
                                         ),
-                                        SizedBox(height: 20),
+                                        SizedBox(height: 30),
                                         Text(
                                           'Total Staff',
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 16,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                         SizedBox(height: 10),
@@ -127,6 +129,7 @@ class _HomeState extends State<Home> {
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 16,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                       SizedBox(height: 10),
@@ -137,12 +140,13 @@ class _HomeState extends State<Home> {
                                           fontSize: 16,
                                         ),
                                       ),
-                                      SizedBox(height: 20),
+                                      SizedBox(height: 30),
                                       Text(
                                         'Maintenance and Repair',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 16,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                       SizedBox(height: 10),
