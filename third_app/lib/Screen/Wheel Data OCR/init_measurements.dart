@@ -51,7 +51,7 @@ class InitMeasurements extends StatefulWidget {
 }
 
 class _InitMeasurementsState extends State<InitMeasurements> {
-  String selectedOption = 'No';
+  String? selectedOption = 'No';
   String fullName = AppState.fullName;
   String occupation = AppState.occupation;
   @override
@@ -943,8 +943,8 @@ class _InitMeasurementsState extends State<InitMeasurements> {
                                   ],
                                   onChanged: (String? newValue) {
                                     setState(() {
-                                      selectedOption =
-                                          newValue ?? selectedOption;
+                                      selectedOption = newValue;
+                
                                       bool flag = false;
                                       if (selectedOption == "Yes") {
                                         flag = true;
