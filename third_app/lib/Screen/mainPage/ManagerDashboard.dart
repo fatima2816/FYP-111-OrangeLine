@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:fl_chart/fl_chart.dart';
 import 'package:third_app/Screen/fault_detection/Page3.dart';
+import 'package:third_app/Screen/Wheel Data OCR/wheel_analysis.dart';
 import 'package:third_app/Screen/Wheel Data OCR/ocr.dart';
 import 'package:third_app/Screen/Spare_Parts/PlotScreen.dart';
 import 'package:third_app/Screen/mainPage/Home.dart';
@@ -75,6 +76,8 @@ class _ManagerDashboardState extends State<ManagerDashboard> {
       case 1:
         return ocr();
       case 2:
+        return WheelAnalysis();
+      case 3:
         return PlotScreen();
 
       default:
@@ -478,8 +481,9 @@ class MyDrawer extends StatelessWidget {
                   // _buildMenuItem(1, 'Wheel Data Form', Icons.data_usage),
                   // _buildMenuItem(2, 'Fault Data Form', Icons.edit),
                   // _buildMenuItem(3, 'Fault Detection', Icons.warning),
-                  _buildMenuItem(1, 'Wheel Analysis', Icons.analytics),
-                  _buildMenuItem(2, 'Spare Parts', Icons.settings),
+                  _buildMenuItem(1, 'Wheel Data OCR', Icons.image),
+                  _buildMenuItem(2, 'Wheel Analysis', Icons.analytics),
+                  _buildMenuItem(3, 'Spare Parts', Icons.settings),
                 ],
               ),
             ),
