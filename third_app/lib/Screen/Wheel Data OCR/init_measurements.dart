@@ -943,8 +943,8 @@ class _InitMeasurementsState extends State<InitMeasurements> {
                                   ],
                                   onChanged: (String? newValue) {
                                     setState(() {
-                                      selectedOption = newValue;
-
+                                      selectedOption =
+                                          newValue ?? selectedOption;
                                       bool flag = false;
                                       if (selectedOption == "Yes") {
                                         flag = true;
