@@ -101,23 +101,34 @@ class _RepetitiveFaultsChartState extends State<RepetitiveFaultsChart> {
 
     for (var row in rawData) {
       String equipment = row["Equipment"] ?? "Unknown";
-      String trainNumber = row["TrainNumber"].toString();
-      String carNumber = row["CarNumber"].toString();
-      DateTime faultDate = DateTime.parse(row["OccurrenceDate"]);
+      String trainNumber = row["TrainNumber"]?.toString() ?? "Unknown";
+      String carNumber = row["CarNumber"]?.toString() ?? "Unknown";
+      DateTime? faultDate;
 
+      // Parsing the date if it's not null
+      if (row["OccurrenceDate"] != null) {
+        faultDate = DateTime.tryParse(row["OccurrenceDate"]);
+      }
+
+      // Skipping iteration if equipment is "Others" or empty
       if (equipment == "Others" || equipment.isEmpty) continue;
 
       String equipmentKey = "$equipment\_$trainNumber\_$carNumber";
+      DateTime dateNull = DateTime(DateTime.now().year, 2, 12);
 
+      // Adding a new entry if equipmentFaults does not contain the key
       if (!equipmentFaults.containsKey(equipmentKey)) {
         equipmentFaults[equipmentKey] = {
           "count": 0,
-          "date": faultDate,
+          "date": faultDate ??
+              DateTime.now(), // Using current date if faultDate is null
         };
       }
 
+      // Incrementing count and updating date
       equipmentFaults[equipmentKey]?["count"] += 1;
-      equipmentFaults[equipmentKey]?["date"] = faultDate;
+      equipmentFaults[equipmentKey]?["date"] =
+          faultDate ?? dateNull; // Using current date if faultDate is null
     }
 
     List<EquipmentFault> filteredFaults = [];

@@ -92,6 +92,7 @@ class _FaultsChartState extends State<FaultsChart> {
     if (response.statusCode == 200) {
       final List<dynamic> allRows = await fetchAllRows('FaultData');
       final processedData = _processData(allRows);
+      print("aadasd");
       print(processedData);
       return processedData;
     } else {
@@ -102,15 +103,36 @@ class _FaultsChartState extends State<FaultsChart> {
   List<FaultData> _processData(List<dynamic> rawData) {
     Map<String, int> equipmentFaults = {};
 
+    // for (var row in rawData) {
+    //   final DateTime occurrenceDate =
+    //       DateFormat('yyyy-MM-dd').parse(row['OccurrenceDate']);
+    //   final DateTime startDate = DateTime(2020, 3, 1);
+    //   final DateTime endDate = DateTime(2024, 3, 15);
+
+    //   if (occurrenceDate.isAfter(startDate) &&
+    //       occurrenceDate.isBefore(endDate)) {
+    //     final String equipment = row['Equipment'] ?? 'Unknown';
+    //     if (equipment != 'Others' && equipment != 'Unknown') {
+    //       equipmentFaults[equipment] = (equipmentFaults[equipment] ?? 0) + 1;
+    //     }
+    //   }
+    // }
     for (var row in rawData) {
+      final String? occurrenceDateStr = row['OccurrenceDate'] as String?;
+      final String? equipment = row['Equipment'] as String?;
+
+      // Check if the necessary data is not null
+      if (occurrenceDateStr == null || equipment == null) {
+        continue; // Skip this row if any of the required fields are null
+      }
+
       final DateTime occurrenceDate =
-          DateFormat('yyyy-MM-dd').parse(row['OccurrenceDate']);
+          DateFormat('yyyy-MM-dd').parse(occurrenceDateStr);
       final DateTime startDate = DateTime(2020, 3, 1);
       final DateTime endDate = DateTime(2024, 3, 15);
 
       if (occurrenceDate.isAfter(startDate) &&
           occurrenceDate.isBefore(endDate)) {
-        final String equipment = row['Equipment'] ?? 'Unknown';
         if (equipment != 'Others' && equipment != 'Unknown') {
           equipmentFaults[equipment] = (equipmentFaults[equipment] ?? 0) + 1;
         }
