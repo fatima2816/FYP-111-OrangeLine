@@ -168,7 +168,8 @@ class _FaultsEditorState extends State<FaultsEditor> {
               icon: Icon(Icons.filter_list),
               label: Text('Filter'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.orange,
+                //primary: Colors.orange,
+                backgroundColor: Colors.orange,
               ),
             ),
           ),
