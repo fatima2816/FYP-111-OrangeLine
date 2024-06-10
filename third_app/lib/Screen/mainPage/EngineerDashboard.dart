@@ -92,6 +92,8 @@ class _EngineerDashboardState extends State<EngineerDashboard> {
       // case 5:
       //   return FaultsEditor();
       case 6:
+        return HorizontalTable();
+      case 7:
         return ReportScreen();
 
       default:
@@ -120,6 +122,12 @@ class _EngineerDashboardState extends State<EngineerDashboard> {
         appBarColor = Color(0xFF111112); // Color for the fifth page
         break;
       case 5:
+        appBarColor = Color(0xFF111112); // Color for the fifth page
+        break;
+      case 6:
+        appBarColor = Color(0xFF111112); // Color for the fifth page
+        break;
+      case 7:
         appBarColor = Color(0xFF111112); // Color for the fifth page
         break;
       default:
@@ -504,8 +512,8 @@ class MyDrawer extends StatelessWidget {
                   _buildMenuItem(3, 'Fault Detection', Icons.warning),
                   _buildMenuItem(4, 'Wheel Data OCR', Icons.image),
                   _buildMenuItem(5, 'Wheel Analysis', Icons.analytics),
-                  // _buildMenuItem(5, 'View Faults', Icons.error_outline),
-                  _buildMenuItem(6, 'Report', Icons.description),
+                  _buildMenuItem(6, 'View Faults', Icons.error_outline),
+                  _buildMenuItem(7, 'Report', Icons.description),
                   // _buildMenuItem(5, 'Spare Parts', Icons.settings),
                 ],
               ),
