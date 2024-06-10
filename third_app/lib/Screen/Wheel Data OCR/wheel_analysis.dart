@@ -340,9 +340,10 @@ class _WheelAnalysisState extends State<WheelAnalysis> {
                                             fontSize: 16,
                                             color: Colors.white))),
                                     DataCell(Text('${isFit ? 'Fit' : 'Unfit'}',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.white))),
+                                  style: TextStyle(
+                                  fontSize: 16,
+                                  color: isFit ? Colors.green : Colors.red,
+                                ))),
                                   ]);
                                 }).toList(),
                               ),
