@@ -4,6 +4,7 @@ import 'package:third_app/Screen/Wheel_Analysis/Page1.dart';
 import 'package:third_app/Screen/fault_detection/Page3.dart';
 import 'package:third_app/Screen/Fault_Data/first.dart';
 import 'package:third_app/Screen/Wheel Data OCR/ocr.dart';
+import 'package:third_app/Screen/Wheel Data OCR/wheel_analysis.dart';
 import 'package:third_app/Screen/Report/report.dart';
 import 'package:third_app/Screen/crud_app/edit_faults.dart';
 import 'package:third_app/Screen/mainPage/Home.dart';
@@ -86,9 +87,13 @@ class _EngineerDashboardState extends State<EngineerDashboard> {
         return Page3();
       case 4:
         return ocr();
+      case 5:
+        return WheelAnalysis();
       // case 5:
       //   return FaultsEditor();
-      case 5:
+      case 6:
+        return HorizontalTable();
+      case 7:
         return ReportScreen();
 
       default:
@@ -499,9 +504,10 @@ class MyDrawer extends StatelessWidget {
                   _buildMenuItem(1, 'Wheel Data Form', Icons.data_usage),
                   _buildMenuItem(2, 'Fault Data Form', Icons.edit),
                   _buildMenuItem(3, 'Fault Detection', Icons.warning),
-                  _buildMenuItem(4, 'Wheel Analysis', Icons.analytics),
-                  // _buildMenuItem(5, 'View Faults', Icons.error_outline),
-                  _buildMenuItem(5, 'Report', Icons.description),
+                  _buildMenuItem(4, 'Wheel Data OCR', Icons.image),
+                  _buildMenuItem(5, 'Wheel Analysis', Icons.analytics),
+                  _buildMenuItem(6, 'View Faults', Icons.error_outline),
+                  _buildMenuItem(7, 'Report', Icons.description),
                   // _buildMenuItem(5, 'Spare Parts', Icons.settings),
                 ],
               ),
