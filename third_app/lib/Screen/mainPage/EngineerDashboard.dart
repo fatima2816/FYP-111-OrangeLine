@@ -124,6 +124,12 @@ class _EngineerDashboardState extends State<EngineerDashboard> {
       case 5:
         appBarColor = Color(0xFF111112); // Color for the fifth page
         break;
+      case 6:
+        appBarColor = Color(0xFF111112); // Color for the fifth page
+        break;
+      case 7:
+        appBarColor = Color(0xFF111112); // Color for the fifth page
+        break;
       default:
         appBarColor = Colors.black; // Default color
     }
