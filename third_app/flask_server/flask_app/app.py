@@ -34,7 +34,6 @@ supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 
 supabase_client = supabase.Client(supabase_url, supabase_key)
 
-
 app = Flask(__name__)
 
 
@@ -229,7 +228,7 @@ def get_table():
 all_fault_info = {
     'fault_info': {},
     'fault_status': {},
-    'fault_Detection': {},
+    'fault_detection': {},
 }
 
 all_data = {
@@ -513,6 +512,12 @@ def upload_ocr():
             data = request.get_json()
             print(type(data))
             # Access the values using data[]
+            TrainNumber = data['TrainNumber']
+            WheelSetNumber = data['WheelSetNumber']
+            Date = data['Date']
+            Time = data['Time']
+           
+            
             a_LHS_Diameter = data['A-LHS-Diameter']
             a_LHS_FlangeThickness = data['A-LHS-FlangeThickness']
             a_LHS_FlangeWidth = data['A-LHS-FlangeWidth']
@@ -533,10 +538,7 @@ def upload_ocr():
             b_RHS_FlangeWidth = data['B-RHS-FlangeWidth']
             b_RHS_Qr = data['B-RHS-Qr']
             b_RHS_RadialDeviation = data['B-RHS-RadialDeviation']
-            Date = data['Date']
-            Time = data['Time']
-            TrainNumber = data['TrainNumber']
-            WheelSetNumber = data['WheelSetNumber']
+           
             afterCut = data['afterCut']
             
             # Assuming the Date is in the format "06.06.2023"
@@ -678,55 +680,63 @@ def wheel_analysis():
 #         print("Error:", e)
 
 
-@app.route('/fault_detection', methods=['POST'])
-def fault_detection():
-    if request.method == 'POST':
-        data = request.get_json() 
-        print(data)
+# @app.route('/fault_detection', methods=['POST'])
+# def fault_detection():
+#     if request.method == 'POST':
+#         data = request.get_json() 
+#         print(data)
 
-        fault_description = data.get('faultdescController', '')
-        fault_solution = data.get('faultsolController', '')
+#         fault_description = data.get('faultdescController', '')
+#         fault_solution = data.get('faultsolController', '')
 
        
       
        
-        table_name = "FaultDetection"
+#         table_name = "FaultDetection"
         
-        insert_faultdata = {
-        'fault_desc': fault_description,
-        'fault_sol': fault_solution,
+#         insert_faultdata = {
+#         'fault_desc': fault_description,
+#         'fault_sol': fault_solution,
         
       
-    }
-        print(insert_faultdata)
-        supabase_client.table(table_name).insert(insert_faultdata).execute()
+#     }
+#         print(insert_faultdata)
+#         supabase_client.table(table_name).insert(insert_faultdata).execute()
         
 
-        # Respond back to Flutter application with a success message
-        return jsonify({'message': 'Data received successfully'}), 200
-    else:
-        return jsonify({'error': 'Invalid request method'}), 405
+#         # Respond back to Flutter application with a success message
+#         return jsonify({'message': 'Data received successfully'}), 200
+#     else:
+#         return jsonify({'error': 'Invalid request method'}), 405
 
 
 #Reporting 
+
+
 current_date = datetime.now().date()
-last_week = current_date - timedelta(days=120)
+last_week = current_date - timedelta(days=200)
 
 table_name = "FaultData"
 rows = supabase_client.table(table_name).select("*").gte('OccurrenceDate', last_week).execute().data
 
 @app.route('/report_data')
-def get_report_data():
+def faultTable():
+
     faultsOccurred = 0
     faultsResolved = 0
     faultsPending = 0
     faultsObservation = 0
 
-        
     for row in rows:
+        system = row["System"]
+        equipment = row["Equipment"]
         status = row["Status"]
-        faultsOccurred += 1
 
+        if system == "Others" or system is None or equipment == "Others" or equipment is None:
+            continue
+        
+        faultsOccurred += 1
+        
         if status == 'Resolved':
             faultsResolved += 1
         elif status == 'Pending':
@@ -739,15 +749,41 @@ def get_report_data():
         "Number of Faults": [faultsOccurred, faultsResolved, faultsPending, faultsObservation]
     }
 
-    return jsonify(tableData)
+    # Create figure and axis
+    fig, ax = plt.subplots()
 
+    # Hide axes
+    ax.axis('tight')
+    ax.axis('off')
 
-def generate_and_return_graph():
-   
+    # Create table
+    table = ax.table(cellText=list(zip(tableData["Fault Data"], map(str, tableData["Number of Faults"]))),
+                    colLabels=["Fault Data", "Number of Faults"],  # Add column labels
+                    cellLoc='center',
+                    loc='center')
+
+    # Adjust font size
+    table.auto_set_font_size(False)
+    table.set_fontsize(14)
+
+    # Adjust cell heights
+    table.scale(1.2, 1.6)
+
+    # Save graph
+    plt.savefig(f'../../assets/Fault_Table.png')
+
+    return systemGraph()
+
+def systemGraph():
+
     system_faults = {}
-    
+
     for row in rows:
         system = row["System"]
+        equipment = row["Equipment"]
+
+        if system == "Others" or system is None or equipment == "Others" or equipment is None:
+            continue
 
         if system not in system_faults:
             system_faults[system] = 0
@@ -755,7 +791,7 @@ def generate_and_return_graph():
         system_faults[system] += 1
 
     # Plotting
-    sorted_system = sorted(system_faults.items(), key=lambda x: x[1], reverse=True)[:10]
+    sorted_system = sorted(system_faults.items(), key=lambda x: x[1], reverse=True)
     system_names = [item[0] for item in sorted_system]
     faults_counts = [item[1] for item in sorted_system]
 
@@ -764,8 +800,9 @@ def generate_and_return_graph():
     plt.title("System Faults", fontsize=16, fontweight='bold')
     plt.xlabel("System", fontsize=14)
     plt.ylabel("Faults Count", fontsize=14)
+    max_faults_count = max(faults_counts)
     plt.xticks([])
-    plt.yticks(fontsize=12)
+    plt.yticks(range(5, max_faults_count + 5), fontsize=12)
     plt.gca().yaxis.set_major_locator(MaxNLocator(integer=True))  # Display only whole number values on y-axis
     plt.grid(color='gray', linestyle='--', linewidth=0.5, axis='y', alpha=0.7)
 
@@ -774,47 +811,26 @@ def generate_and_return_graph():
     for bar, label in zip(bars, system_names):
         yval = bar.get_height()
         plt.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=10, fontweight='bold')
-        plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=8, color='black', rotation=90)
+        plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=10, color='black', rotation=90)
 
     plt.tight_layout()
-    folder_path = os.path.abspath(os.path.join(os.path.dirname("app.py"), '..', '..', 'assets'))
 
-    # Check if the directory exists, if not, create it
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
+    plt.savefig(f'../../assets/Systems_Graph.png')
 
-    # Now you can save your images in this folder
-    image_path = os.path.join(folder_path, 'systems.png')
+    return equipmentGraph(system_names)
 
-    plt.savefig(image_path)
+def equipmentGraph(system_names):
 
-    # Close plot to free up memory
-    plt.close()
+    # print(system_names)
 
-    return image_path
+    for savedSystems in system_names:
 
-@app.route('/systems_graph')
-def systems_graph():
-    # Get the image path
-    image_path = generate_and_return_graph()
-    # Return the image path
-    return jsonify({'image_path': image_path})
-
-
-
-def generate_equipment_graph(system_names):
-   
-    if not system_names:
-        return jsonify({'error': 'System names not provided'})
-    print("DDSFDS")
-    print(system_names)
-    for saved_system in system_names:
         equipment_faults = {}
 
         for row in rows:
             system = row["System"]
 
-            if system == saved_system:
+            if system == savedSystems:
                 equipment = row["Equipment"]
 
                 if system == "Others" or system is None or equipment == "Others" or equipment is None:
@@ -845,58 +861,16 @@ def generate_equipment_graph(system_names):
 
         for bar, label in zip(bars, equipment_names):
             yval = bar.get_height()
-            plt.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=20, fontweight='bold')
-            plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=20, color='black', rotation=90)
+            plt.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=10, fontweight='bold')
+            plt.text(bar.get_x() + bar.get_width()/2, fixed_vertical_height, label, ha='center', va='bottom', fontsize=10, color='black', rotation=90)
 
         plt.tight_layout()
 
-        folder_path = os.path.abspath(os.path.join(os.path.dirname("app.py"), '..', '..', 'assets'))
+        # Save the image with a specific name in a local folder
+        plt.savefig(f'../../assets/{savedSystems}.png')
 
-        # Check if the directory exists, if not, create it
-        if not os.path.exists(folder_path):
-            os.makedirs(folder_path)
+        return system_names
 
-
-        # Now you can save your images in this folder
-        image_path = os.path.join(folder_path, f'{saved_system}.png')
-
-        plt.savefig(image_path)
-
-        # Close plot to free up memory
-        plt.close()
-
-        return image_path
-        
-        
-@app.route('/equipment_graph')
-def equipment_graph():
-
-    system_faults = {}
-    print(rows)
-    print("daasd")
-    for row in rows:
-        system = row["System"]
-        equipment = row["Equipment"]
-
-        if system == "Others" or system is None or equipment == "Others" or equipment is None:
-            continue
-
-        if system not in system_faults:
-            system_faults[system] = 0
-        
-        system_faults[system] += 1
-
-    # Plotting
-    sorted_system = sorted(system_faults.items(), key=lambda x: x[1], reverse=True)
-    system_names = [item[0] for item in sorted_system]
-   # Plot equipment graphs for each system
-   # Plot equipment graphs for each system
-    generated_images = []
-    for system_name in system_names:
-        image_path = generate_equipment_graph([system_name])  # Pass each system name separately
-        generated_images.append(image_path)
-    # Return the list of image paths
-    return jsonify({'image_paths': generated_images})
 
 @app.route('/spareParts_data', methods=['GET'])
 def get_data():
@@ -915,131 +889,137 @@ def get_data():
 def fault_info():
     if request.method == 'POST':
         data = request.get_json()
-        a = data['_date1Controller']
-        b = data['trainNo']
-        c = data['CarNo']
+
+        a = data['occurrenceDate']
+        b = data['trainNumber']
+        c = data['carNumber']
         d = data['system']
-        e = data['Equipment']
-        f = data['Equipment_loc']
-        g = data['Fault_Source']
+        e = data['equipment']
+        f = data['equipmentLocation']
+        g = data['source']
 
         response_data = {
-            'date': a,
-            'trainNo': b,
-            'CarNo': c,
+            'occurrenceDate': a,
+            'trainNumber': b,
+            'carNumber': c,
             'system': d,
-            'Equipment': e,
-            'Equipment_loc': f,
-            'Fault_Source': g,
+            'equipment': e,
+            'equipmentLocation': f,
+            'source': g,
         }
         
     all_fault_info['fault_info'] = data
     print(all_fault_info['fault_info'])
+
     return jsonify(response_data)
 
 @app.route('/fault_status', methods=['POST'])
 def fault_status():
     if request.method == 'POST':
         data = request.get_json()
-        # Extract data from the JSON payload
-        a = data['_resdateController']
+
+        a = data['resolutionDate']
         b = data['status']
         c = data['sparePartsConsumed']
-        d = data['partsSwapped']
+        d = data['sparePartsSwapped']
 
-        # Prepare response data
         response_data = {
-            '_resdateController': a,
+            'resolutionDate': a,
             'status': b,
             'sparePartsConsumed': c,
-            'partsSwapped': d,
+            'sparePartsSwapped': d,
         }
 
-        # Store received fault status data
-        all_fault_info['fault_status'] = data
-        print(all_fault_info['fault_info'])
+    all_fault_info['fault_status'] = data
+    print(all_fault_info['fault_status'])
 
-        # Return response as JSON
-        return jsonify(response_data)
+    return jsonify(response_data)
 
-@app.route('/fault_detection_info', methods=['POST'])
-def fault_detection_info():
+@app.route('/fault_detection', methods=['POST'])
+def fault_detection():
     if request.method == 'POST':
         data = request.get_json() 
-        print(data)
 
-        fault_description = data.get('faultdescController', '')
-        fault_solution = data.get('faultsolController', '')
+        a = data.get('description', '')
+        b = data.get('solution', '')
 
- 
+        response_data = {
+            'description': a,
+            'solution': b,
+        }
+
     all_fault_info['fault_detection'] = data
+    print(all_fault_info['fault_detection'])
 
+    return jsonify(response_data)
 
+@app.route('/fault_record', methods=['POST'])
+def fault_record():
 
-          
+    # page 1
     fault_info_data = all_fault_info['fault_info']
    
-    # # Extract date and time strings
-    # date_string = fault_info_data['_date1Controller']
-    
-    #     # Convert date string to a date object
-        
-    # formatted_date = datetime.strptime(date_string, '%Y-%m-%d').date()
-    # formatted_date = formatted_date.strftime('%Y-%m-%d')
-    # print(formatted_date)
-
-  
-
-    trainNumber = fault_info_data['trainNo']
-    
-    CarNo = fault_info_data['CarNo']
+    occurrenceDate = fault_info_data['occurrenceDate']
+    trainNumber = fault_info_data['trainNumber']
+    carNumber = fault_info_data['carNumber']
     system = fault_info_data['system']
-    equipment = fault_info_data['Equipment']
-    equipment_loc = fault_info_data['Equipment_loc']
-    fault_source = fault_info_data['Fault_Source']
+    equipment = fault_info_data['equipment']
+    equipmentLocation = fault_info_data['equipmentLocation']
+    source = fault_info_data['source']
 
-           
+    occurrenceDate = datetime.strptime(occurrenceDate, '%Y-%m-%d').date()
+    occurrenceDate = occurrenceDate.strftime('%Y-%m-%d')
+
+    # page 2
     fault_info_data = all_fault_info['fault_status']
+
+    resolutionDate = fault_info_data['resolutionDate']
     status = fault_info_data['status']
+    sparePartsConsumed = fault_info_data['sparePartsConsumed']
+    sparePartsSwapped = fault_info_data['sparePartsSwapped']
     
-    # Extract date and time strings
-    res_date_string = fault_info_data['_resdateController']
-   
-    formatted_date_res = datetime.strptime(res_date_string, '%Y-%m-%d').date()
-    formatted_date_res = formatted_date_res.strftime('%Y-%m-%d')
-    print(formatted_date_res)
+    if resolutionDate != '':
+        resolutionDate = datetime.strptime(resolutionDate, '%Y-%m-%d').date()
+        resolutionDate = resolutionDate.strftime('%Y-%m-%d')
+    else:
+        resolutionDate = None
 
-    # Define your Supabase project URL and API key
-    supabase_url = "https://typmqqidaijuobjosrpi.supabase.co"
-    supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR5cG1xcWlkYWlqdW9iam9zcnBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM0MzkzODAsImV4cCI6MjAwOTAxNTM4MH0.Ihde633Yj9FFaQ7hKLooxDxaFEno4fK8YxSb3gy8S4c"
+    # page 3
+    fault_info_data = all_fault_info['fault_detection']
 
-    # Initialize the Supabase client
-    supabase_client = supabase.Client(supabase_url, supabase_key)
+    description = fault_info_data['description']
+    solution = fault_info_data['solution']
+
+    # data insertion
     table_name = "FaultData"
-   
-   
-    
 
-    # Prepare the data to be inserted
+    record = supabase_client.table(table_name).select('*').order('SR', desc=True).limit(1).execute()
+    data = record.data[0]
+    serial = data['SR']
+    serial = serial + 1
+
     insert_data = {     
-        # 'SR':102, 
-        'OccurrenceDate':'2024-04-23',
-        'TrainNumber':trainNumber, 
-        'CarNumber':CarNo,
-        'Source': fault_source,
-        'System':system,
-        'Equipment':equipment,
-        'EquipmentLocation':equipment_loc,
-        'Status':status,
-        'ResolutionDate':res_date_string,
-        'fault_desc':fault_description,
-        'fault_sol':fault_solution,
+        'SR': serial, 
+        'OccurrenceDate': occurrenceDate,
+        'TrainNumber': trainNumber, 
+        'CarNumber': carNumber,
+        'Source': source,
+        'System': system,
+        'Equipment': equipment,
+        'EquipmentLocation': equipmentLocation,
+        'SparePartsConsumed': sparePartsConsumed,
+        'SparePartsSwapped': sparePartsSwapped,
+        'Description': description,
+        'Solution': solution,
+        'Status': status,
+        'ResolutionDate': resolutionDate,
     }
+
     print(insert_data)
     supabase_client.table(table_name).insert(insert_data).execute()
-                    
-      
        
-    return jsonify({"message": "Dummy data inserted successfully"})
+    return jsonify({"message": "Data inserted successfully"})
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
