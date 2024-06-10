@@ -34,7 +34,6 @@ supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 
 supabase_client = supabase.Client(supabase_url, supabase_key)
 
-
 app = Flask(__name__)
 
 
@@ -229,7 +228,7 @@ def get_table():
 all_fault_info = {
     'fault_info': {},
     'fault_status': {},
-    'fault_Detection': {},
+    'fault_detection': {},
 }
 
 all_data = {
@@ -681,34 +680,34 @@ def wheel_analysis():
 #         print("Error:", e)
 
 
-@app.route('/fault_detection', methods=['POST'])
-def fault_detection():
-    if request.method == 'POST':
-        data = request.get_json() 
-        print(data)
+# @app.route('/fault_detection', methods=['POST'])
+# def fault_detection():
+#     if request.method == 'POST':
+#         data = request.get_json() 
+#         print(data)
 
-        fault_description = data.get('faultdescController', '')
-        fault_solution = data.get('faultsolController', '')
+#         fault_description = data.get('faultdescController', '')
+#         fault_solution = data.get('faultsolController', '')
 
        
       
        
-        table_name = "FaultDetection"
+#         table_name = "FaultDetection"
         
-        insert_faultdata = {
-        'fault_desc': fault_description,
-        'fault_sol': fault_solution,
+#         insert_faultdata = {
+#         'fault_desc': fault_description,
+#         'fault_sol': fault_solution,
         
       
-    }
-        print(insert_faultdata)
-        supabase_client.table(table_name).insert(insert_faultdata).execute()
+#     }
+#         print(insert_faultdata)
+#         supabase_client.table(table_name).insert(insert_faultdata).execute()
         
 
-        # Respond back to Flutter application with a success message
-        return jsonify({'message': 'Data received successfully'}), 200
-    else:
-        return jsonify({'error': 'Invalid request method'}), 405
+#         # Respond back to Flutter application with a success message
+#         return jsonify({'message': 'Data received successfully'}), 200
+#     else:
+#         return jsonify({'error': 'Invalid request method'}), 405
 
 
 #Reporting 
@@ -890,131 +889,137 @@ def get_data():
 def fault_info():
     if request.method == 'POST':
         data = request.get_json()
-        a = data['_date1Controller']
-        b = data['trainNo']
-        c = data['CarNo']
+
+        a = data['occurrenceDate']
+        b = data['trainNumber']
+        c = data['carNumber']
         d = data['system']
-        e = data['Equipment']
-        f = data['Equipment_loc']
-        g = data['Fault_Source']
+        e = data['equipment']
+        f = data['equipmentLocation']
+        g = data['source']
 
         response_data = {
-            'date': a,
-            'trainNo': b,
-            'CarNo': c,
+            'occurrenceDate': a,
+            'trainNumber': b,
+            'carNumber': c,
             'system': d,
-            'Equipment': e,
-            'Equipment_loc': f,
-            'Fault_Source': g,
+            'equipment': e,
+            'equipmentLocation': f,
+            'source': g,
         }
         
     all_fault_info['fault_info'] = data
     print(all_fault_info['fault_info'])
+
     return jsonify(response_data)
 
 @app.route('/fault_status', methods=['POST'])
 def fault_status():
     if request.method == 'POST':
         data = request.get_json()
-        # Extract data from the JSON payload
-        a = data['_resdateController']
+
+        a = data['resolutionDate']
         b = data['status']
         c = data['sparePartsConsumed']
-        d = data['partsSwapped']
+        d = data['sparePartsSwapped']
 
-        # Prepare response data
         response_data = {
-            '_resdateController': a,
+            'resolutionDate': a,
             'status': b,
             'sparePartsConsumed': c,
-            'partsSwapped': d,
+            'sparePartsSwapped': d,
         }
 
-        # Store received fault status data
-        all_fault_info['fault_status'] = data
-        print(all_fault_info['fault_info'])
+    all_fault_info['fault_status'] = data
+    print(all_fault_info['fault_status'])
 
-        # Return response as JSON
-        return jsonify(response_data)
+    return jsonify(response_data)
 
-@app.route('/fault_detection_info', methods=['POST'])
-def fault_detection_info():
+@app.route('/fault_detection', methods=['POST'])
+def fault_detection():
     if request.method == 'POST':
         data = request.get_json() 
-        print(data)
 
-        fault_description = data.get('faultdescController', '')
-        fault_solution = data.get('faultsolController', '')
+        a = data.get('description', '')
+        b = data.get('solution', '')
 
- 
+        response_data = {
+            'description': a,
+            'solution': b,
+        }
+
     all_fault_info['fault_detection'] = data
+    print(all_fault_info['fault_detection'])
 
+    return jsonify(response_data)
 
+@app.route('/fault_record', methods=['POST'])
+def fault_record():
 
-          
+    # page 1
     fault_info_data = all_fault_info['fault_info']
    
-    # # Extract date and time strings
-    # date_string = fault_info_data['_date1Controller']
-    
-    #     # Convert date string to a date object
-        
-    # formatted_date = datetime.strptime(date_string, '%Y-%m-%d').date()
-    # formatted_date = formatted_date.strftime('%Y-%m-%d')
-    # print(formatted_date)
-
-  
-
-    trainNumber = fault_info_data['trainNo']
-    
-    CarNo = fault_info_data['CarNo']
+    occurrenceDate = fault_info_data['occurrenceDate']
+    trainNumber = fault_info_data['trainNumber']
+    carNumber = fault_info_data['carNumber']
     system = fault_info_data['system']
-    equipment = fault_info_data['Equipment']
-    equipment_loc = fault_info_data['Equipment_loc']
-    fault_source = fault_info_data['Fault_Source']
+    equipment = fault_info_data['equipment']
+    equipmentLocation = fault_info_data['equipmentLocation']
+    source = fault_info_data['source']
 
-           
+    occurrenceDate = datetime.strptime(occurrenceDate, '%Y-%m-%d').date()
+    occurrenceDate = occurrenceDate.strftime('%Y-%m-%d')
+
+    # page 2
     fault_info_data = all_fault_info['fault_status']
+
+    resolutionDate = fault_info_data['resolutionDate']
     status = fault_info_data['status']
+    sparePartsConsumed = fault_info_data['sparePartsConsumed']
+    sparePartsSwapped = fault_info_data['sparePartsSwapped']
     
-    # Extract date and time strings
-    res_date_string = fault_info_data['_resdateController']
-   
-    formatted_date_res = datetime.strptime(res_date_string, '%Y-%m-%d').date()
-    formatted_date_res = formatted_date_res.strftime('%Y-%m-%d')
-    print(formatted_date_res)
+    if resolutionDate != '':
+        resolutionDate = datetime.strptime(resolutionDate, '%Y-%m-%d').date()
+        resolutionDate = resolutionDate.strftime('%Y-%m-%d')
+    else:
+        resolutionDate = None
 
-    # Define your Supabase project URL and API key
-    supabase_url = "https://typmqqidaijuobjosrpi.supabase.co"
-    supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR5cG1xcWlkYWlqdW9iam9zcnBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM0MzkzODAsImV4cCI6MjAwOTAxNTM4MH0.Ihde633Yj9FFaQ7hKLooxDxaFEno4fK8YxSb3gy8S4c"
+    # page 3
+    fault_info_data = all_fault_info['fault_detection']
 
-    # Initialize the Supabase client
-    supabase_client = supabase.Client(supabase_url, supabase_key)
+    description = fault_info_data['description']
+    solution = fault_info_data['solution']
+
+    # data insertion
     table_name = "FaultData"
-   
-   
-    
 
-    # Prepare the data to be inserted
+    record = supabase_client.table(table_name).select('*').order('SR', desc=True).limit(1).execute()
+    data = record.data[0]
+    serial = data['SR']
+    serial = serial + 1
+
     insert_data = {     
-        # 'SR':102, 
-        'OccurrenceDate':'2024-04-23',
-        'TrainNumber':trainNumber, 
-        'CarNumber':CarNo,
-        'Source': fault_source,
-        'System':system,
-        'Equipment':equipment,
-        'EquipmentLocation':equipment_loc,
-        'Status':status,
-        'ResolutionDate':res_date_string,
-        'fault_desc':fault_description,
-        'fault_sol':fault_solution,
+        'SR': serial, 
+        'OccurrenceDate': occurrenceDate,
+        'TrainNumber': trainNumber, 
+        'CarNumber': carNumber,
+        'Source': source,
+        'System': system,
+        'Equipment': equipment,
+        'EquipmentLocation': equipmentLocation,
+        'SparePartsConsumed': sparePartsConsumed,
+        'SparePartsSwapped': sparePartsSwapped,
+        'Description': description,
+        'Solution': solution,
+        'Status': status,
+        'ResolutionDate': resolutionDate,
     }
+
     print(insert_data)
     supabase_client.table(table_name).insert(insert_data).execute()
-                    
-      
        
-    return jsonify({"message": "Dummy data inserted successfully"})
+    return jsonify({"message": "Data inserted successfully"})
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=8000)

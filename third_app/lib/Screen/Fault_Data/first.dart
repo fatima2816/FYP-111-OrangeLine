@@ -242,13 +242,13 @@ class _firstState extends State<first> {
         'http://127.0.0.1:8000/fault_info'); // Replace with your Flask API endpoint URL
 
     final data = <String, dynamic>{
-      '_date1Controller': (_dateController.text),
-      'trainNo': selectedValue,
-      'CarNo': selectedValue2,
+      'occurrenceDate': (_dateController.text),
+      'trainNumber': selectedValue,
+      'carNumber': selectedValue2,
       'system': selectedValue3,
-      'Equipment': selectedValue4,
-      'Equipment_loc': selectedValue5,
-      'Fault_Source': selectedValue6,
+      'equipment': selectedValue4,
+      'equipmentLocation': selectedValue5,
+      'source': selectedValue6,
     };
 
     print(data);
@@ -918,7 +918,8 @@ class _firstState extends State<first> {
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xddff8518),
+                              //primary: Color(0xddff8518),
+                              backgroundColor: Colors.orange,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),

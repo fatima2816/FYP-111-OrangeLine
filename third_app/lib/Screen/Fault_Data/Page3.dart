@@ -79,8 +79,8 @@ class _Page3State extends State<Page3> {
     final DateTime? picked = await showDatePicker(
       context: context,
       initialDate: selectedResDate,
-      firstDate: DateTime(2000),
-      lastDate: DateTime(2101),
+      firstDate: DateTime(2020),
+      lastDate: DateTime(2100),
     );
 
     if (picked != null && picked != selectedResDate) {
@@ -94,11 +94,11 @@ class _Page3State extends State<Page3> {
   Future<void> sendDataInDatabase(String selected, bool? isChecked,
       bool? isChecked2, bool? isChecked3, bool? isChecked4) async {
     final data = {
-      '_resdateController': (_resdateController.text),
+      'resolutionDate': (_resdateController.text),
       'status': selected,
       'sparePartsConsumed':
           isChecked != null ? (isChecked ? 'Yes' : 'No') : 'No',
-      'partsSwapped': isChecked3 != null ? (isChecked3 ? 'Yes' : 'No') : 'No',
+      'sparePartsSwapped': isChecked3 != null ? (isChecked3 ? 'Yes' : 'No') : 'No',
     };
     final url = Uri.parse(
         'http://127.0.0.1:8000/fault_status'); // Replace with your Flask API endpoint URL
@@ -559,7 +559,8 @@ class _Page3State extends State<Page3> {
                                     ),
                                   ),
                                   style: ElevatedButton.styleFrom(
-                                    primary: Color(0xddff8518),
+                                    //primary: Color(0xddff8518),
+                                    backgroundColor: Colors.orange,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15),
                                     ),
@@ -591,7 +592,8 @@ class _Page3State extends State<Page3> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  primary: Color(0xddff8518),
+                                  //primary: Color(0xddff8518),
+                                  backgroundColor: Colors.orange,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15),
                                   ),

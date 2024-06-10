@@ -62,14 +62,14 @@ class _FaultPredictionState extends State<FaultPrediction> {
   }
 
   Future<void> sendDataRequest() async {
-    final url = Uri.parse('http://127.0.0.1:8000/fault_detection_info');
+    final url = Uri.parse('http://127.0.0.1:8000/fault_detection');
     final headers = <String, String>{
       'Content-Type': 'application/json',
     };
 
     final data = <String, dynamic>{
-      'faultdescController': (FaultInputController.text),
-      'faultsolController': (FaultSolutionController.text),
+      'description': (FaultInputController.text),
+      'solution': (FaultSolutionController.text),
     };
 
     final response = await http.post(
@@ -77,9 +77,17 @@ class _FaultPredictionState extends State<FaultPrediction> {
       headers: headers,
       body: jsonEncode(data),
     );
+
+    print("helloooo");
     if (response.statusCode == 200) {
       print('Data sent successfully');
       print('Response: ${response.body}');
+
+      await http.post(
+        Uri.parse('http://127.0.0.1:8000/fault_record'),
+        headers: headers,
+        body: jsonEncode(data),
+      );
 
       clearTextFields();
       Navigator.push(
@@ -524,7 +532,8 @@ class _FaultPredictionState extends State<FaultPrediction> {
                                 ),
                               ),
                               style: ElevatedButton.styleFrom(
-                                primary: Color(0xddff8518),
+                                //primary: Color(0xddff8518),
+                                backgroundColor: Colors.orange,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
@@ -537,12 +546,13 @@ class _FaultPredictionState extends State<FaultPrediction> {
                             height: 40,
                             child: ElevatedButton(
                               onPressed: () {
-                                 Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => EngineerDashboard(),
-        ),
-      );
+                                sendDataRequest();
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => EngineerDashboard(),
+                                  ),
+                                );
                                 // sendDataRequest();
                               },
                               child: Text(
@@ -553,7 +563,8 @@ class _FaultPredictionState extends State<FaultPrediction> {
                                 ),
                               ),
                               style: ElevatedButton.styleFrom(
-                                primary: Color(0xddff8518),
+                                //primary: Color(0xddff8518),
+                                backgroundColor: Colors.orange,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
