@@ -943,8 +943,8 @@ class _InitMeasurementsState extends State<InitMeasurements> {
                                   ],
                                   onChanged: (String? newValue) {
                                     setState(() {
-                                      selectedOption =
-                                          newValue ?? selectedOption;
+                                      selectedOption = newValue;
+
                                       bool flag = false;
                                       if (selectedOption == "Yes") {
                                         flag = true;
@@ -985,48 +985,28 @@ class _InitMeasurementsState extends State<InitMeasurements> {
                                         // print('App Data: ${DataManager().appData}');
                                       } else {
                                         // Restore trainData to the original values
+                                        DataManager()
+                                                .trainData['A-LHS-Diameter'] =
+                                            '0.0';
                                         DataManager().trainData[
-                                            'A-LHS-Diameter'] = DataManager()
-                                                .appData['A-LHS-Diameter'] ??
-                                            '';
+                                            'A-LHS-FlangeThickness'] = '0.0';
                                         DataManager().trainData[
-                                                'A-LHS-FlangeThickness'] =
-                                            DataManager().appData[
-                                                    'A-LHS-FlangeThickness'] ??
-                                                '';
-                                        DataManager().trainData[
-                                            'A-LHS-FlangeWidth'] = DataManager()
-                                                .appData['A-LHS-FlangeWidth'] ??
-                                            '';
+                                            'A-LHS-FlangeWidth'] = '0.0';
                                         DataManager().trainData['A-LHS-Qr'] =
-                                            DataManager().appData['A-LHS-Qr'] ??
-                                                '';
+                                            '0.0';
                                         DataManager().trainData[
-                                                'A-LHS-RadialDeviation'] =
-                                            DataManager().appData[
-                                                    'A-LHS-RadialDeviation'] ??
-                                                '';
+                                            'A-LHS-RadialDeviation'] = '0.0';
+                                        DataManager()
+                                                .trainData['A-RHS-Diameter'] =
+                                            '0.0';
                                         DataManager().trainData[
-                                            'A-RHS-Diameter'] = DataManager()
-                                                .appData['A-RHS-Diameter'] ??
-                                            '';
+                                            'A-RHS-FlangeThickness'] = '0.0';
                                         DataManager().trainData[
-                                                'A-RHS-FlangeThickness'] =
-                                            DataManager().appData[
-                                                    'A-RHS-FlangeThickness'] ??
-                                                '';
-                                        DataManager().trainData[
-                                            'A-RHS-FlangeWidth'] = DataManager()
-                                                .appData['A-RHS-FlangeWidth'] ??
-                                            '';
+                                            'A-RHS-FlangeWidth'] = '0.0';
                                         DataManager().trainData['A-RHS-Qr'] =
-                                            DataManager().appData['A-RHS-Qr'] ??
-                                                '999';
+                                            '0.0';
                                         DataManager().trainData[
-                                                'A-RHS-RadialDeviation'] =
-                                            DataManager().appData[
-                                                    'A-RHS-RadialDeviation'] ??
-                                                '';
+                                            'A-RHS-RadialDeviation'] = '0.0';
                                         // print('After Cut is No: ${DataManager().trainData}');
                                         // print('App Data: ${DataManager().appData}');
                                       }
