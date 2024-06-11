@@ -593,92 +593,7 @@ class _firstState extends State<first> {
                       ),
                       SizedBox(height: 10),
                       Padding(
-                        padding: EdgeInsets.only(left: 58),
-                        child: Column(
-                          children: <Widget>[
-                            Row(
-                              // Added a Row widget to include both text and asterisk
-                              children: <Widget>[
-                                Text(
-                                  'Equipment Location',
-                                  style: TextStyle(
-                                    fontFamily: 'Inter',
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2,
-                                    color: Color(0xffffffff),
-                                  ),
-                                ),
-                                SizedBox(width: 5), //space between text and *
-                                Text(
-                                  '*', // Asterisk
-                                  style: TextStyle(
-                                    fontFamily: 'Inter',
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2,
-                                    color: Colors.red,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Row(
-                          children: [
-                            SizedBox(height: 10),
-                            Padding(
-                              padding: EdgeInsets.only(left: 42),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 180,
-                                    height: 40,
-                                    child: DropdownButton<String>(
-                                      value: selectedValue5,
-                                      onChanged: (String? newValue) {
-                                        setState(() {
-                                          selectedValue5 = newValue!;
-                                        });
-                                      },
-                                      items: locationList
-                                          .map<DropdownMenuItem<String>>(
-                                              (String value) {
-                                        return DropdownMenuItem<String>(
-                                          value: value,
-                                          child: Text(value),
-                                        );
-                                      }).toList(),
-                                      icon: Icon(Icons.arrow_drop_down,
-                                          color: Color(0xddff8518)),
-                                      iconSize: 24,
-                                      isExpanded: true,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 710,
-                top: 280,
-                child: Align(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 30),
+                        padding: EdgeInsets.only(left: 60),
                         child: Row(
                           children: [
                             Text(
@@ -706,58 +621,61 @@ class _firstState extends State<first> {
                       ),
                       SizedBox(height: 10),
                       Padding(
-                        padding: EdgeInsets.only(left: 15),
+                        padding: EdgeInsets.only(left: 60),
                         child: Row(
                           children: [
-                            SizedBox(height: 10),
-                            Padding(
-                              padding: EdgeInsets.only(left: 15),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 180,
-                                    height: 40,
-                                    child: DropdownButton<String>(
-                                      value: selectedValue6,
-                                      items: [
-                                        '4 Day Power',
-                                        '4 Day Non Power',
-                                        'System Maintenance',
-                                        'Mainline Return',
-                                        'Status Card',
-                                        'Station Guarantee',
-                                        'TD',
-                                        'RSMD',
-                                        'Arrival Inspection',
-                                        'Departure Inspection',
-                                        'Train Operator',
-                                        'Modification',
-                                        'Transition',
-                                      ].map((String value) {
-                                        return DropdownMenuItem<String>(
-                                          value: value,
-                                          child: Text(value),
-                                        );
-                                      }).toList(),
-                                      onChanged: (String? newValue) {
-                                        setState(() {
-                                          selectedValue6 = newValue!;
-                                        });
-                                      },
-                                      icon: Icon(Icons.arrow_drop_down,
-                                          color: Color(0xddff8518)),
-                                      iconSize: 24,
-                                      isExpanded:
-                                          true, // Ensures the dropdown button expands to fill its container
-                                    ),
-                                  ),
-                                ],
+                            SizedBox(
+                              width: 180,
+                              height: 40,
+                              child: DropdownButton<String>(
+                                value: selectedValue6,
+                                items: [
+                                  '4 Day Power',
+                                  '4 Day Non Power',
+                                  'System Maintenance',
+                                  'Mainline Return',
+                                  'Status Card',
+                                  'Station Guarantee',
+                                  'TD',
+                                  'RSMD',
+                                  'Arrival Inspection',
+                                  'Departure Inspection',
+                                  'Train Operator',
+                                  'Modification',
+                                  'Transition',
+                                ].map((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    selectedValue6 = newValue!;
+                                  });
+                                },
+                                icon: Icon(Icons.arrow_drop_down,
+                                    color: Color(0xddff8518)),
+                                iconSize: 24,
+                                isExpanded:
+                                    true, // Ensures the dropdown button expands to fill its container
                               ),
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 710,
+                top: 280,
+                child: Align(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       Padding(
                         padding: EdgeInsets.only(left: 30),
                         child: Column(
@@ -872,6 +790,72 @@ class _firstState extends State<first> {
                                   });
                                 },
                                 items: equipmentList
+                                    .map<DropdownMenuItem<String>>(
+                                        (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                                icon: Icon(Icons.arrow_drop_down,
+                                    color: Color(0xddff8518)),
+                                iconSize: 24,
+                                isExpanded: true,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: EdgeInsets.only(left: 30),
+                        child: Column(
+                          children: <Widget>[
+                            Row(
+                              // Added a Row widget to include both text and asterisk
+                              children: <Widget>[
+                                Text(
+                                  'Equipment Location',
+                                  style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    height: 1.2,
+                                    color: Color(0xffffffff),
+                                  ),
+                                ),
+                                SizedBox(width: 5), //space between text and *
+                                Text(
+                                  '*', // Asterisk
+                                  style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    height: 1.2,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: EdgeInsets.only(left: 30),
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 180,
+                              height: 40,
+                              child: DropdownButton<String>(
+                                value: selectedValue5,
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    selectedValue5 = newValue!;
+                                  });
+                                },
+                                items: locationList
                                     .map<DropdownMenuItem<String>>(
                                         (String value) {
                                   return DropdownMenuItem<String>(
