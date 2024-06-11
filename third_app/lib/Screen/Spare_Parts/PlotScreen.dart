@@ -128,7 +128,7 @@ class _PlotScreenState extends State<PlotScreen> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('April 2024'),
+              title: Text('June 2024'),
               content: SingleChildScrollView(
                 child: DataTable(
                   columns: [
@@ -154,7 +154,7 @@ class _PlotScreenState extends State<PlotScreen> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('April 2024'),
+              title: Text('June 2024'),
               content: Text('No data available.'),
               actions: [
                 TextButton(
@@ -265,7 +265,8 @@ class _PlotScreenState extends State<PlotScreen> {
                         child: ElevatedButton(
                           onPressed: _getTable,
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xddff8518),
+                            //primary: Color(0xddff8518),
+                            backgroundColor: Colors.orange,
                           ),
                           child: SizedBox(
                             height: 30.0,
@@ -285,7 +286,8 @@ class _PlotScreenState extends State<PlotScreen> {
                         // Adding another button
                         onPressed: _getTable2,
                         style: ElevatedButton.styleFrom(
-                          primary: Color(
+                          backgroundColor: Color(
+                          //primary: Color(
                               0xddff8518), // Change color as per your requirement
                         ),
                         child: SizedBox(
